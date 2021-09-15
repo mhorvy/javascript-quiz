@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* main section styling */
+body {
+    background: lightblue;
+}
+
+/* info box and buttons styling */
+.start_button,
+.info-box,
+.quiz-box,
+.results-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.info-box.activeInfo {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+}
+
+.start_button button {
+    font-size: 25px;
+    font-weight: 500;
+    color: darkblue;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.info-box {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.info-box .info-title {
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.info-box .info-list {
+    padding: 15px 35px;
+}
+
+ .info-list .info {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.info-box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px;
+}
+
+.info-box .buttons .button {
+    margin: 0 5px;
+    height: 50px;
+    width: 100px;
+    border: 2px solid darkblue;
+    background: lightblue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buttons button.quit {
+    margin: 0 5px;
+    height: 50px;
+    width: 100px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background: lightblue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buttons button.restart {
+    margin: 0 5px;
+    height: 50px;
+    width: 100px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background: lightblue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* quiz box styling */
+.quiz-box {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: white;
+    border-radius: 10px;
+}
+
+.quiz-box header {
+    position: relative;
+    height:  50px;
+    padding: 0 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.quiz-box header .title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* timer styling */
+.quiz-box header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+    background: lightblue;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.quiz-box section  {
+    padding: 25px 30px 20px 30px;
+    background: white;
+
+}
+
+.quiz-box section .question-text {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.quiz-box section .answer-options {
+    padding: 20px 0;
+    display: block;
+}
+
+.quiz-box section .answer-options .option {
+    background: lightblue;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.quiz-box section .answer-options .option:hover {
+    background: darkblue;
+    color: white;
+}
+
+footer .next {
+    height: 50px;
+    padding: 0 15px;
+    font-size: medium;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background: lightblue;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.results-box {
+    background: white;
+    width: 500px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
