@@ -22,7 +22,8 @@ body {
     border-radius: 10px;
 }
 
-.info-box.activeInfo {
+.info-box.activeInfo,
+.quiz-box.activeQuiz{
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
