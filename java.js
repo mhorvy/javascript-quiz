@@ -21,16 +21,40 @@ restartButton.onclick = ()=>{
     showQuestions(0);
 }
 
+let questionCount = 0;
+
+const nextButton = quizBox.querySelector(".next");
+
+//next button clicked
+nextButton.onclick = ()=>{
+    showQuestions(index);
+    }
+
 
 // to get the questions array
 function showQuestions(index){
     const questionText = document.querySelector(".question-text");
-    const optionsList = document.querySelector(".answer-options");
-    let questionTag = '<span>' + questionsList[index].question + '</span>';
-    let optionTag = '<div class="option">' + questionsList[index].options[0] + '<span></span></div>'
-                        + '<div class="option">' + questionsList[index].options[1] + '<span></span></div>'
-                        + '<div class="option">' + questionsList[index].options[2] + '<span></span></div>'
-                        + '<div class="option">' + questionsList[index].options[3] + '<span></span></div>';
-    questionText.innerHtml = questionTag;
-    optionsList.innerHTML = optionTag;
+    const optionList = document.querySelector(".answer-options");
+    let questionTag = '<span>'+ questionsList[index].numb + ". " + questionsList[index].question +'</span>';
+    let optionTag = '<div class="option"><span>'+ questionsList[index].optionsList[0] +'</span></div>'
+    + '<div class="option"><span>'+ questionsList[index].optionsList[1] +'</span></div>'
+    + '<div class="option"><span>'+ questionsList[index].optionsList[2] +'</span></div>'
+    + '<div class="option"><span>'+ questionsList[index].optionsList[3] +'</span></div>';
+    questionText.innerHTML = questionTag;
+    optionList.innerHTML = optionTag;
+    
+    const option = optionList.querySelectorAll (".option");
+    for(i=0; i < option.length; i++){
+        option[i].setAttribute("onclick", "optionSelected(this)");
+    }
+}
+
+function optionSelected(answer){
+    let selectedAnswer = answer.questionText;
+    let correctAnswer = questionsList[index].answer;
+    if(selectedAnswer === correctAnswer){
+    console.log ("Answer is correct");
+    }else{
+        console.log("Answer is wrong");
+    }
 }
