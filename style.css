@@ -187,6 +187,19 @@ body {
     color: white;
 }
 
+.quiz-box section .answer-options.correct{
+    color: green;
+    background: white;
+    border-color: darkgreen;
+}
+
+
+.quiz-box section .answer-options.wrong{
+    color: red;
+    background: white;
+    border-color: darkred;
+}
+
 footer .next {
     height: 50px;
     padding: 0 15px;
